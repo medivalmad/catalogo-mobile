@@ -1,56 +1,220 @@
-# Welcome to your Expo app 👋
+Catálogo Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido em React Native com Expo para exibição de
+produtos organizados por categorias masculinas e femininas.
 
-## Get started
+O projeto consome dados da API DummyJSON utilizando Axios e possui
+navegação entre telas com Expo Router, gerenciamento de estado global
+com Redux Toolkit e interface responsiva para dispositivos móveis.
 
-1. Install dependencies
+Funcionalidades
 
-   ```bash
-   npm install
-   ```
+Tela de login com validação de campos
 
-2. Start the app
+Armazenamento temporário do usuário com Redux Toolkit
 
-   ```bash
-   npx expo start
-   ```
+Logout funcional com limpeza dos dados armazenados
 
-In the output, you'll find options to open the app in a
+Separação de produtos por abas Masculino e Feminino
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Categorias masculinas: Camisas, Calçados e Relógios
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Categorias femininas: Bolsas, Vestidos, Joias, Calçados e Relógios
 
-## Get a fresh project
+Consumo da API DummyJSON com Axios
 
-When you're ready, run:
+Indicador de carregamento durante as requisições
 
-```bash
-npm run reset-project
-```
+Tratamento de erros nas chamadas da API
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Listagem de produtos utilizando FlatList
 
-### Other setup steps
+Tela de detalhes do produto
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Exibição de imagem, nome, descrição, preço e percentual de desconto
 
-## Learn more
+Navegação dinâmica utilizando o ID do produto
 
-To learn more about developing your project with Expo, look at the following resources:
+Proteção da tela de catálogo para usuários não autenticados
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Tecnologias utilizadas
 
-## Join the community
+React Native
 
-Join our community of developers creating universal apps.
+Expo
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+TypeScript
+
+Expo Router
+
+Axios
+
+Redux Toolkit
+
+React Redux
+
+DummyJSON API
+
+Estrutura principal do projeto
+
+src/
+├── app/
+│   ├── _layout.tsx
+│   ├── index.tsx
+│   ├── catalogo.tsx
+│   └── produto/
+│       └── [id].tsx
+├── services/
+│   └── api.ts
+└── store/
+    ├── store.ts
+    └── userSlice.ts
+
+Descrição dos principais arquivos
+
+src/app/index.tsx: tela de login e validação dos campos.
+
+src/app/catalogo.tsx: listagem de produtos, categorias, abas e
+logout.
+
+src/app/produto/[id].tsx: tela de detalhes do produto utilizando
+rota dinâmica.
+
+src/app/_layout.tsx: configuração das rotas da aplicação.
+
+src/services/api.ts: configuração do Axios para consumo da
+DummyJSON.
+
+src/store/store.ts: configuração da store global do Redux.
+
+src/store/userSlice.ts: gerenciamento dos dados do usuário e das
+ações de login/logout.
+
+API utilizada
+
+O projeto utiliza a API pública DummyJSON.
+
+Endpoint base:
+
+https://dummyjson.com
+
+Exemplo de busca por categoria:
+
+GET /products/category/mens-shirts
+
+Exemplo de busca de produto pelo ID:
+
+GET /products/83
+
+Como executar o projeto
+
+Pré-requisitos
+
+Node.js
+
+npm
+
+Expo Go no dispositivo móvel, caso queira executar no celular
+
+Instalação
+
+Clone o repositório:
+
+git clone https://github.com/medivalmad/catalogo-mobile.git
+
+Entre na pasta:
+
+cd catalogo-mobile
+
+Instale as dependências:
+
+npm install
+
+Inicie:
+
+npx expo start
+
+Após iniciar, é possível escanear o QR Code com o Expo Go, executar no
+Android ou abrir a versão web.
+
+Fluxo da aplicação
+
+Login
+  ↓
+Validação dos campos
+  ↓
+Redux armazena o usuário
+  ↓
+Catálogo
+  ↓
+Masculino / Feminino
+  ↓
+Categorias
+  ↓
+Axios consulta a DummyJSON
+  ↓
+Lista de produtos
+  ↓
+Produto selecionado
+  ↓
+Tela de detalhes
+
+Gerenciamento de estado
+
+O Redux Toolkit é utilizado para armazenar temporariamente os dados do
+usuário.
+
+No login:
+
+logged = true
+email = usuário informado
+
+No logout:
+
+logged = false
+email = ""
+
+O estado também é utilizado para impedir o acesso ao catálogo quando o
+usuário não está autenticado.
+
+Tratamento de carregamento e erros
+
+Durante as requisições à API, o aplicativo utiliza ActivityIndicator
+para indicar o carregamento.
+
+Caso ocorra algum erro na comunicação com a API, uma mensagem é
+apresentada ao usuário.
+
+Navegação
+
+A navegação é realizada utilizando Expo Router.
+
+/ --- tela de login
+
+/catalogo --- tela principal do catálogo
+
+/produto/[id] --- tela dinâmica de detalhes do produto
+
+Prints do projeto
+
+Login
+
+![alt text](image-1.png)
+
+Catálogo
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+Detalhes do produto
+
+![alt text](image-5.png)
+
+Autor
+
+João Pedro Lemos de Oliveira
+
+Projeto desenvolvido para a disciplina de Mobile Development.
