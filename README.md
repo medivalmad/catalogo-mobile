@@ -222,6 +222,12 @@ A navegação é realizada utilizando Expo Router.
 
 ## 👨‍💻 Autor
 
+## 📄 Relatório Prático
+
+O relatório prático do projeto contém os principais registros das funcionalidades implementadas e prints do aplicativo em funcionamento.
+
+[Visualizar Relatório Prático](docs/Relatorio_Pratico_Catalogo_Mobile_FINAL.pdf)
+
 João Pedro Lemos de Oliveira
 
 Projeto desenvolvido para a disciplina de Mobile Development.
