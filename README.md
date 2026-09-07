@@ -228,6 +228,13 @@ O relatório prático do projeto contém os principais registros das funcionalid
 
 [Visualizar Relatório Prático](docs/Relatorio_Pratico_Catalogo_Mobile_FINAL.pdf)
 
+## 🎥 Vídeo de apresentação
+
+O funcionamento do projeto e as principais funcionalidades implementadas
+são apresentados no vídeo abaixo:
+
+https://youtu.be/4gncwImHx_8
+
 João Pedro Lemos de Oliveira
 
 Projeto desenvolvido para a disciplina de Mobile Development.
