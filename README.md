@@ -195,25 +195,32 @@ A navegação é realizada utilizando Expo Router.
 
 /produto/[id] --- tela dinâmica de detalhes do produto
 
-Prints do projeto
+## 📱 Prints do projeto
 
-Login
+### Login
 
-![alt text](image-1.png)
+<p align="center">
+  <img src="image-1.png" width="300" alt="Tela de login do Catálogo Mobile">
+</p>
 
-Catálogo
+### Catálogo
 
-![alt text](image-2.png)
+<p align="center">
+  <img src="image-2.png" width="300" alt="Catálogo de produtos">
+  <img src="image-3.png" width="300" alt="Filtro de produtos por categoria">
+</p>
 
-![alt text](image-3.png)
+<p align="center">
+  <img src="image-4.png" width="300" alt="Catálogo masculino">
+</p>
 
-![alt text](image-4.png)
+### Detalhes do produto
 
-Detalhes do produto
+<p align="center">
+  <img src="image-5.png" width="300" alt="Tela de detalhes do produto">
+</p>
 
-![alt text](image-5.png)
-
-Autor
+## 👨‍💻 Autor
 
 João Pedro Lemos de Oliveira
 
